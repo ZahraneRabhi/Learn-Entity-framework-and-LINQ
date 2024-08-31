@@ -2,7 +2,7 @@
 
 This solution is designed to help me learn and practice [Entity FrameWork](https://learn.microsoft.com/en-us/aspnet/entity-framework) and [LINQ](https://learn.microsoft.com/en-us/dotnet/csharp/linq/) (Language-Integrated Query) in C#. It includes a simple API for managing heroes, inspired by characters from 'The Boys' series.
 <div align="center">
-  <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExcG9jYjFrbzR2YWVtN2d1YXNvaTFyZnRjazQ2Njc3Z2VhNWp2MzZnZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9dg/KMikhPf3RV7pRAJ1YW/giphy.gif" alt="Homelander" width="40%"/>
+  <img src="https://th.bing.com/th/id/R.c8eb33e4c72211b1b07b14bfa5119b3a?rik=xz0J%2fNRiO7Hs1A&pid=ImgRaw&r=0" alt="Homelander" width="40%"/>
 </div>
 
 ## Project Structure
