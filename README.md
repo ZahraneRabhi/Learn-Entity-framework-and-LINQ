@@ -40,4 +40,4 @@ This solution is designed to help me learn and practice [Entity FrameWork](https
 
 
 # Note
-This Repo gonna be my starting point to learn Entity Frameword and LINQ so its quite basic as of now.
+This Repo gonna be my starting point to learn Entity Framework and LINQ so its quite basic as of now.
