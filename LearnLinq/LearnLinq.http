@@ -1,0 +1,6 @@
+@LearnLinq_HostAddress = http://localhost:5174
+
+GET {{LearnLinq_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
