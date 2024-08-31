@@ -54,7 +54,6 @@ namespace LearnLinq.Controllers
             var heroes = await _context.Heroes.ToListAsync();
             _context.Heroes.RemoveRange(heroes);
             await _context.SaveChangesAsync();
-
             return NoContent();
         }
 
