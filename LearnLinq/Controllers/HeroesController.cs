@@ -96,7 +96,7 @@ namespace LearnLinq.Controllers
         }
 
         /// <summary>
-        /// Deletes all Heores with the corresponding Threat
+        /// Gets all Heores with the corresponding Threat
         /// </summary>
         /// <returns>A list of heroes</returns>
         [HttpGet("{threat:string}")]
