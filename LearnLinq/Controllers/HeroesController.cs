@@ -57,6 +57,7 @@ namespace LearnLinq.Controllers
             return NoContent();
         }
 
+
         /// <summary>
         /// Seeds the database with a list of hardcoded heroes
         /// </summary>
@@ -67,6 +68,42 @@ namespace LearnLinq.Controllers
             var heroes = HeroSeeder.SeedHeroes();
             _context.Heroes.AddRange(heroes);
             await _context.SaveChangesAsync();
+            return Ok(heroes);
+        }
+
+        /// <summary>
+        /// Gets a hero by his Id
+        /// </summary>
+        /// <returns>A corresponding hero</returns>
+        [HttpGet("{id:int}")]
+        public async Task<ActionResult<Hero>> GetHeroById(int id)
+        {
+            var hero = await _context.Heroes.Where(h => h.Id == id).FirstOrDefaultAsync();
+            if (hero == null) { return NoContent(); }   
+            return Ok(hero);
+        }
+
+        /// <summary>
+        /// Gets a hero by his name
+        /// </summary>
+        /// <returns>A corresponding hero</returns>
+        [HttpPost("{name:string}")]
+        public async Task<ActionResult<Hero>> GetHeroByName(string name)
+        {
+            var hero = await _context.Heroes.Where(h => h.Name == name).FirstOrDefaultAsync();
+            if (hero == null) { return NoContent(); }
+            return Ok(hero);
+        }
+
+        /// <summary>
+        /// Deletes all Heores with the corresponding Threat
+        /// </summary>
+        /// <returns>A list of heroes</returns>
+        [HttpGet("{threat:string}")]
+        public async Task<ActionResult<IEnumerable<Hero>>> GetHerosByThreat(string threat)
+        {
+            var heroes = await _context.Heroes.Where(h => h.Threat == threat).ToListAsync();
+            if (heroes == null) { return NoContent(); }
             return Ok(heroes);
         }
     }

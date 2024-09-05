@@ -15,7 +15,7 @@ namespace LearnLinq.Data
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { } 
 
         /// <summary>
-        /// Gets or sets the <see cref="DbSet{TEntity}"/> of heroes
+        /// Gets or sets the <see cref="DbSet{Hero}"/> of heroes
         /// </summary>
         public DbSet<Hero> Heroes { get; set; }
     }
